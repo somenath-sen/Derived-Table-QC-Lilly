@@ -58,5 +58,5 @@ Reference schema: `rgd_gold_ad` (Gold `encounters`, `patients`, `medication`).
 
 ## How to run
 
-Run against the warehouse (MySQL) with read access to `ad_mci_prod` and
+Run using the MySQL Workbench with read access to `ad_mci_prod` and
 `rgd_gold_ad`. Sections are independent; run individually or as a full script.
