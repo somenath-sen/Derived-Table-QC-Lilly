@@ -228,14 +228,3 @@ SELECT MAX(medication_end_date) max_med_end_date FROM rgd_gold_ad.medication;
 
 -- Gold patient roster size
 SELECT COUNT(*) gold_patients FROM rgd_gold_ad.patients;
-
-
--- =====================================================================
--- 14. DATA DICTIONARY — column/type listing for all delivered tables
--- =====================================================================
-SELECT TABLE_NAME, ORDINAL_POSITION, COLUMN_NAME, COLUMN_TYPE, IS_NULLABLE, COLUMN_KEY
-FROM information_schema.COLUMNS
-WHERE TABLE_SCHEMA='ad_mci_prod'
-  AND TABLE_NAME IN ('admci_biomarkers','admci_adverse_events',
-                     'admci_att_discontinuation','admci_aria','admci_scores')
-ORDER BY TABLE_NAME, ORDINAL_POSITION;
